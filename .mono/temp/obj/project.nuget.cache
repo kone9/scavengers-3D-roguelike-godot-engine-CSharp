@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "fjSlr+30QS6GkW9LziyiUQjVrDSRDLOwl1YIbt5elFk7Wc2ZYu7M/6A8SYfj/BJwNIYawG+FlzVwxKIC0OOQgQ==",
+  "success": true,
+  "projectFilePath": "/home/ariel/Documentos/Godot engine proyectos/GODOT C# PROYECTOS/scavengers 3D roguelik godot engine C#/scavengers 3D roguelik godot engine C#.csproj",
+  "expectedPackageFiles": [
+    "/home/ariel/.nuget/packages/microsoft.netframework.referenceassemblies/1.0.0/microsoft.netframework.referenceassemblies.1.0.0.nupkg.sha512",
+    "/home/ariel/.nuget/packages/microsoft.netframework.referenceassemblies.net47/1.0.0/microsoft.netframework.referenceassemblies.net47.1.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

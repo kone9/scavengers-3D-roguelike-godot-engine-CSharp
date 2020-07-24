@@ -1,0 +1,6 @@
+/home/ariel/Documentos/Godot engine proyectos/GODOT C# PROYECTOS/scavengers 3D roguelik godot engine C#/.mono/temp/bin/ExportDebug/scavengers 3D roguelik godot engine C#.dll
+/home/ariel/Documentos/Godot engine proyectos/GODOT C# PROYECTOS/scavengers 3D roguelik godot engine C#/.mono/temp/bin/ExportDebug/scavengers 3D roguelik godot engine C#.pdb
+/home/ariel/Documentos/Godot engine proyectos/GODOT C# PROYECTOS/scavengers 3D roguelik godot engine C#/.mono/temp/obj/ExportDebug/scavengers 3D roguelik godot engine C#.csprojAssemblyReference.cache
+/home/ariel/Documentos/Godot engine proyectos/GODOT C# PROYECTOS/scavengers 3D roguelik godot engine C#/.mono/temp/obj/ExportDebug/scavengers 3D roguelik godot engine C#.csproj.CoreCompileInputs.cache
+/home/ariel/Documentos/Godot engine proyectos/GODOT C# PROYECTOS/scavengers 3D roguelik godot engine C#/.mono/temp/obj/ExportDebug/scavengers 3D roguelik godot engine C#.dll
+/home/ariel/Documentos/Godot engine proyectos/GODOT C# PROYECTOS/scavengers 3D roguelik godot engine C#/.mono/temp/obj/ExportDebug/scavengers 3D roguelik godot engine C#.pdb

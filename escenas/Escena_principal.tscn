@@ -1,0 +1,75 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://escenas/cubos/Cubo8.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Codigos/GameManager.cs" type="Script" id=2]
+[ext_resource path="res://escenas/cubos/Cubo10.tscn" type="PackedScene" id=3]
+[ext_resource path="res://escenas/cubos/Cubo7.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Codigos/BoardManager.cs" type="Script" id=5]
+[ext_resource path="res://escenas/cubos/Cubo4.tscn" type="PackedScene" id=6]
+[ext_resource path="res://escenas/cubos/Cubo5.tscn" type="PackedScene" id=7]
+[ext_resource path="res://escenas/cubos/Cubo2.tscn" type="PackedScene" id=8]
+[ext_resource path="res://escenas/cubos/Cubo1.tscn" type="PackedScene" id=9]
+[ext_resource path="res://escenas/cubos/Cubo9.tscn" type="PackedScene" id=10]
+[ext_resource path="res://escenas/cubos/Cubo3.tscn" type="PackedScene" id=11]
+[ext_resource path="res://escenas/cubos/Cubo6.tscn" type="PackedScene" id=12]
+[ext_resource path="res://first_person/ToBeDropped.tscn" type="PackedScene" id=13]
+[ext_resource path="res://escenas/personajes/enemigo_1.tscn" type="PackedScene" id=14]
+[ext_resource path="res://escenas/personajes/enemigo_2.tscn" type="PackedScene" id=15]
+[ext_resource path="res://escenas/otros_items/suelo.tscn" type="PackedScene" id=16]
+[ext_resource path="res://escenas/personajes/personaje.tscn" type="PackedScene" id=17]
+
+[sub_resource type="Animation" id=1]
+resource_name = "mundoabajoAgua"
+length = 20.0
+loop = true
+
+[sub_resource type="ProceduralSky" id=2]
+
+[sub_resource type="Environment" id=3]
+background_mode = 2
+background_sky = SubResource( 2 )
+
+[node name="Escena_principal" type="Spatial"]
+
+[node name="FirstPersonController" parent="." instance=ExtResource( 13 )]
+transform = Transform( -0.724172, -0.072085, 0.685842, 0, 0.994522, 0.104529, -0.68962, 0.0756966, -0.720205, 29.4494, 3.259, 0.726341 )
+
+[node name="personaje" parent="." instance=ExtResource( 17 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 1, 0 )
+visible = false
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -0.642788, -0.766044, 0, 0.766044, -0.642788, 0, 2.03068, 0 )
+
+[node name="GameManager" type="Spatial" parent="."]
+script = ExtResource( 2 )
+
+[node name="BoardManager" type="Spatial" parent="GameManager" groups=[
+"BoardManager",
+]]
+script = ExtResource( 5 )
+columns = 16
+rows = 16
+floorTiles = [ ExtResource( 3 ) ]
+outerWallTiles = [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 11 ), ExtResource( 6 ) ]
+wallTiles = [ ExtResource( 11 ), ExtResource( 7 ), ExtResource( 12 ), ExtResource( 4 ), ExtResource( 1 ), ExtResource( 10 ) ]
+enemyTiles = [ ExtResource( 14 ), ExtResource( 15 ) ]
+exit = ExtResource( 16 )
+
+[node name="Board" type="Spatial" parent="." groups=[
+"Board",
+]]
+
+[node name="enemigo_1" parent="." instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 30 )
+visible = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "mundoabajoAgua"
+anims/mundoabajoAgua = SubResource( 1 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 3 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( -0.904828, -0.2979, 0.304206, 0, 0.714473, 0.699663, -0.425777, 0.633075, -0.646475, 28.5994, 16.9593, -5.52641 )
