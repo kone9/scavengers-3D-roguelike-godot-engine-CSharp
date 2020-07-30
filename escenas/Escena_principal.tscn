@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://escenas/cubos/Cubo8.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Codigos/GameManager.cs" type="Script" id=2]
@@ -29,13 +29,15 @@ loop = true
 background_mode = 2
 background_sky = SubResource( 2 )
 
+[sub_resource type="CubeMesh" id=4]
+
 [node name="Escena_principal" type="Spatial"]
+
+[node name="personaje" parent="." instance=ExtResource( 17 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 3, 1, 29 )
 
 [node name="FirstPersonController" parent="." instance=ExtResource( 13 )]
 transform = Transform( -0.724172, -0.072085, 0.685842, 0, 0.994522, 0.104529, -0.68962, 0.0756966, -0.720205, 29.4494, 3.259, 0.726341 )
-
-[node name="personaje" parent="." instance=ExtResource( 17 )]
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 1, 0 )
 visible = false
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
@@ -73,3 +75,9 @@ environment = SubResource( 3 )
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( -0.904828, -0.2979, 0.304206, 0, 0.714473, 0.699663, -0.425777, 0.633075, -0.646475, 28.5994, 16.9593, -5.52641 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 1, 29 )
+visible = false
+mesh = SubResource( 4 )
+material/0 = null
